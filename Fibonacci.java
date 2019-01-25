@@ -1,5 +1,9 @@
 public class Fibonacci {
     static int fibonacci(int n, String type){
+        if(n < 0){
+            System.out.println("Error do not use a negative number");
+            return -1;
+        }
         if(type.equals("iterative")){
             return fibI(n);
         }
@@ -11,6 +15,7 @@ public class Fibonacci {
     }
     static int fibR(int n)
     {
+
         if (n <= 1)
             return n;
         return fibR(n-1) + fibR(n-2);
@@ -18,8 +23,8 @@ public class Fibonacci {
 
     static int fibI(int n)
     {
+
         if(n == 0){
-            System.out.println("Error please use a number greater than 0");
             return 0;
         }
         if(n == 1){
