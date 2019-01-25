@@ -1,6 +1,10 @@
 public class Factorial {
 
     static int factorial(int n, String type){
+        if(n < 1){
+            System.out.println("Error please use a positive number");
+            return -1;
+        }
         if(type.equals("iterative")){
             return factorialI(n);
         }
@@ -13,10 +17,6 @@ public class Factorial {
 
     static int factorialI(int n)
     {
-        if(n < 1){
-            System.out.println("Error, please use numbers greater than 0");
-            return 0;
-        }
         int answer = 1;
         for(int i = n; i > 0; i--){
             answer *= i;
@@ -26,10 +26,6 @@ public class Factorial {
 
     static int factorialR(int n)
     {
-        if(n < 1){
-            System.out.println("Error, please use numbers greater than 0");
-            return 0;
-        }
         if(n == 1){
             return 1;
         }
