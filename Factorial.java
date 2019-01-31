@@ -1,6 +1,6 @@
 public class Factorial {
 
-    static int factorial(int n, String type){
+    public int factorial(int n, String type){
         if(n < 1){
             System.out.println("Error please use a positive number");
             return -1;

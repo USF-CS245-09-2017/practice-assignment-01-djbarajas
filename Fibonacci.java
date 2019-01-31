@@ -1,8 +1,15 @@
 public class Fibonacci {
-    static int fibonacci(int n, String type){
+
+    public int fibonacci(int n, String type){
         if(n < 0){
             System.out.println("Error do not use a negative number");
             return -1;
+        }
+        if(n == 0){
+            return 0;
+        }
+        if(n == 1){
+            return 1;
         }
         if(type.equals("iterative")){
             return fibI(n);
@@ -10,9 +17,10 @@ public class Fibonacci {
         if(type.equals("recursive")){
             return fibR(n);
         }
-        System.out.println("Error please chose recursive or iterative");
+
         return 0;
     }
+
     static int fibR(int n)
     {
 
@@ -23,13 +31,6 @@ public class Fibonacci {
 
     static int fibI(int n)
     {
-
-        if(n == 0){
-            return 0;
-        }
-        if(n == 1){
-            return 1;
-        }
         int sequence[] = new int[n+1];
         sequence[0] = 0;
         sequence[1] = 1;
